@@ -1,12 +1,13 @@
 type Button = {
     children: JSX.Element | string;
+    className?: string;
     onClick?: () => void;
 }
 
-const ButtonComponent = ({children, onClick}: Button) => {
+const ButtonComponent = ({children,className, onClick}: Button) => {
   return (
     <div>
-      <button onClick={onClick}>{children}</button>
+      <button className={className} onClick={onClick}>{children}</button>
     </div>
   )
 }

@@ -18,9 +18,9 @@ const todo_list = () => {
     <div>
       <form action="" onSubmit={handleSubmit}>
        <InputComponent input={input} setInput={setInput} />
-       <ButtonComponent >ADD</ButtonComponent>
+       <ButtonComponent className="w-full bg-gray-700 p-2">ADD</ButtonComponent>
       </form>
-      <div>
+      <div className='h-52'>
        <ListComponent todo={todo} setTodo={setTodo} />
       </div>
     </div>

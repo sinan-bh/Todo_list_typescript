@@ -10,7 +10,7 @@ const InputComponent = ({ input, setInput }: Input) => {
     <div>
       <input
         type="text"
-        className="w-full p-2 rounded-sm"
+        className="w-full p-2 rounded-sm mb-2 bg-gray-500"
         placeholder="todo-list...."
         value={input}
         onChange={(e) => setInput(e.target.value)}
