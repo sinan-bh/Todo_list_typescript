@@ -1,4 +1,3 @@
-import React from 'react'
 import ButtonComponent from './ButtonComponent'
 import { ReactSetState, type Datas } from '../types/utils'
 

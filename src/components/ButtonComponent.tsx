@@ -1,5 +1,3 @@
-import React from 'react'
-
 type Button = {
     children: JSX.Element | string;
     onClick?: () => void;
