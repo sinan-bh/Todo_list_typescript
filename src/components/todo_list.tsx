@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-
-type Datas = {
-    id: string,
-    data: string,
-}
+import InputComponent from './InputComponent'
+import ButtonComponent from './ButtonComponent'
+import { type Datas } from '../types/utils'
+import ListComponent from './listComponent'
 
 const todo_list = () => {
     const [todo, setTodo] = useState<Datas[]>([])
@@ -15,22 +14,14 @@ const todo_list = () => {
         setInput("")
     }
 
-    const handleDelete = (id:string) => {
-        setTodo(item=> item.filter(list=> list.id !== id))
-    }
   return (
     <div>
       <form action="" onSubmit={handleSubmit}>
-        <input type="text" className='w-full p-2 rounded-sm' placeholder='todo-list....' value={input} onChange={(e)=> setInput(e.target.value)}/>
-        <button>ADD</button>
+       <InputComponent input={input} setInput={setInput} />
+       <ButtonComponent >ADD</ButtonComponent>
       </form>
       <div>
-        {todo.map((list,index)=>(
-        <div key={list.id}>
-            <h3>{index + 1}</h3><h3>{list.data}</h3>
-            <button onClick={()=> handleDelete(list.id)}>delete</button>
-        </div>
-        ))}
+       <ListComponent todo={todo} setTodo={setTodo} />
       </div>
     </div>
   )
